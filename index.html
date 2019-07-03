@@ -5,38 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>We be Gemin'</title>
+    <link rel="stylesheet" ="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Gem Game. This is a Gem Game.</h1>
+    <div class="container-fluid">
+        
+        <h1 class="text-center">Gem Game. This is a Gem Game.</h1>
+        
+        <div class="row">
+            <div id="instructionBox" class="container text-center">
+                <p>Pick some gems. They each have a random value. If you can match the random number, you win. If you go over, you lose.</p>
+            </div>
+        </div>
 
-    <div id="instructionBox">
-        <p>Pick some gems. They each have a random value. If you can match the random number, you win. If you go over, you lose.</p>
+    <div class="row">
+        <div class="col">
+            <p>target score: <span id="targetScore" >0</span></p>
+        </div>
+        
+        <div class="col">
+            <p>your score: <span id="userScore">0</span></p>
+        </div>
+        
+    </div>    
+        
+        
+        <div class="targetContainer" id="scoreboard">
+            <p>Wins: <span id="wins">0</span></p>   
+            <p>Losses: <span id="losses">0</span></p>
+            
+            <div class="row">
+                <div class="gemContainer flex justify-content-around">
+                    <button  id="gem1" class="gemChoice" data-value="0">gem 1</button>
+                    <button  id="gem2" class="gemChoice" data-value="0">gem 2</button>
+                    <button  id="gem3" class="gemChoice" data-value="0">gem 3</button>
+                    <button  id="gem4" class="gemChoice" data-value="0">gem 4</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="targetContainer">
-        <span id="targetScore">0</span>
-    </div>
-
-    <div class="targetContainer">
-        <span id="userScore">0</span>
-    </div>
-
-    <div class="stargetContainer" id="scoreboard">
-        <p>Wins: <span id="wins">0</span></p>   
-        <p>Losses: <span id="losses">0</span></p>
-    </div>
-
-    <div id="gemContainer">
-        <button id="gem1" class="gemChoice" data-value="0">gem 1</button>
-        <button id="gem2" class="gemChoice" data-value="0">gem 2</button>
-        <button id="gem3" class="gemChoice" data-value="0">gem 3</button>
-        <button id="gem4" class="gemChoice" data-value="0">gem 4</button>
-    </div>
-
+    
 <script src="assets/javascript/game.js"></script>
 </body>
 </html>
